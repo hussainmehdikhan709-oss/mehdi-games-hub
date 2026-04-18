@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Games - Mehdi Games Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="navbar">
+            <a class="brand" href="index.html">
+                <div class="brand-icon">M</div>
+                <div class="brand-text">
+                    <strong>Mehdi Games Hub</strong>
+                    <span>All Games Library</span>
+                </div>
+            </a>
+            <nav class="nav-actions">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active-link" href="games.html">All Games</a>
+                <a class="nav-link" href="#contact">Contact</a>
+                <a class="cta-button" href="game.html?id=gta-vi">Featured</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero compact-hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Full library</p>
+                <h1>Browse every title in one place.</h1>
+                <p>Search, filter, and open game detail pages for all available releases on the hub.</p>
+            </div>
+            <div class="search-panel">
+                <input id="searchInput" type="search" placeholder="Search all games...">
+                <div class="category-bar" id="categories"></div>
+            </div>
+        </section>
+
+        <section class="section-title">
+            <div>
+                <h2 id="sectionTitle">All Games</h2>
+                <p>Every game available in the hub, ready to explore.</p>
+            </div>
+        </section>
+
+        <section class="game-grid" id="gamesContainer"></section>
+
+        <section class="category-list" id="categoryOverview"></section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <p>Find the game you want, then jump to the detail page or download link.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="games.js"></script>
+</body>
+</html>

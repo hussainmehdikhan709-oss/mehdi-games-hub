@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehdi Games Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="navbar">
+            <a class="brand" href="index.html">
+                <div class="brand-icon">M</div>
+                <div class="brand-text">
+                    <strong>Mehdi Games Hub</strong>
+                    <span>Discover. Download. Play.</span>
+                </div>
+            </a>
+            <nav class="nav-actions">
+                <a class="nav-link active-link" href="index.html">Home</a>
+                <a class="nav-link" href="games.html">All Games</a>
+                <a class="nav-link" href="#contact">Contact</a>
+                <a class="cta-button" href="games.html">Explore</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Official gaming portal</p>
+                    <h1>Play your next favorite game with ease.</h1>
+                    <p>Browse top-rated releases, search by genre, and jump straight to official download pages. Your gaming showcase is built for speed, clarity, and style.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="games.html">Browse games</a>
+                        <a class="btn btn-secondary" href="game.html?id=elden-ring">View details</a>
+                    </div>
+                    <div class="hero-status">
+                        <div class="countdown-card">
+                            <p>Next release</p>
+                            <strong id="countdownTitle">Loading release...</strong>
+                            <div class="countdown-value" id="countdownTimer">00d 00h 00m 00s</div>
+                        </div>
+                        <a class="btn btn-outline" href="games.html">See full game list</a>
+                    </div>
+                </div>
+<div class="hero-visual">
+                <div class="hero-image">
+                    <img src="https://source.unsplash.com/1280x720/?gaming,esports" alt="Pro gaming action">
+                    <div class="image-tag">Level up your game library</div>
+                </div>
+                <div class="features">
+                    <div class="feature-card">
+                        <strong>120+</strong>
+                        <p>Curated game listings from action to sports.</p>
+                    </div>
+                    <div class="feature-card">
+                        <strong>Instant search</strong>
+                        <p>Filter by name and category in real time.</p>
+                    </div>
+                    <div class="feature-card">
+                        <strong>Official links</strong>
+                        <p>Download from verified publisher pages.</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-panel">
+                <input id="searchInput" type="search" placeholder="Search for games, genres, or titles...">
+                <div class="category-bar" id="categories"></div>
+            </div>
+        </section>
+
+        <section class="section-title" id="featured">
+            <div>
+                <h2 id="sectionTitle">All Games</h2>
+                <p>Handpicked titles for powerful gameplay.</p>
+            </div>
+        </section>
+
+        <section class="game-grid" id="gamesContainer"></section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <p>Built for gamers. Powered by fast static design.</p>
+        <p>Want custom game categories or a live scoreboard? Add them to your site anytime.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
