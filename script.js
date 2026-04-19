@@ -187,3 +187,16 @@ searchInput.addEventListener('input', event => {
 renderCategories();
 fetchAndRenderRawgGames();
 setupCountdown();
+
+// Handle new category navigation
+document.querySelectorAll('.nav-cat[data-category]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const category = link.getAttribute('data-category');
+        state.category = category.charAt(0).toUpperCase() + category.slice(1);
+        document.querySelectorAll('.nav-cat').forEach(el => el.classList.remove('active-cat'));
+        link.classList.add('active-cat');
+        fetchAndRenderRawgGames('', genreMap[category] || category);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
