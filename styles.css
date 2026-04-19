@@ -1034,6 +1034,7 @@ body.menu-open .menu-toggle span::after {
     max-width: 1400px;
     margin: 0 auto;
     padding: 32px;
+    padding-top: 160px;
 }
 
 .content-layout {
@@ -1580,6 +1581,7 @@ body.menu-open .menu-toggle span::after {
     max-width: 900px;
     margin: 0 auto;
     padding: 40px 32px;
+    padding-top: 160px;
 }
 
 .blog-post {
@@ -1733,6 +1735,12 @@ body.menu-open .menu-toggle span::after {
 
     .main-content-wrapper {
         padding: 18px;
+        padding-top: 140px;
+    }
+
+    .blog-post-container {
+        padding: 20px 18px;
+        padding-top: 140px;
     }
 
     .content-layout {
