@@ -391,6 +391,24 @@ body.menu-open .menu-toggle span::after {
     border-radius: 24px;
     padding: 22px;
     min-width: 240px;
+
+/* Disqus / User Reviews styling hints */
+.user-reviews h3 {
+    margin: 0 0 12px 0;
+    color: var(--accent);
+    font-size: 1.25rem;
+}
+.user-reviews {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.03);
+    border-radius: 12px;
+    padding: 18px;
+}
+.community-feedback h3 {
+    margin: 0 0 8px 0;
+    color: var(--accent);
+    font-size: 1.05rem;
+}
 }
 
 .countdown-card p {

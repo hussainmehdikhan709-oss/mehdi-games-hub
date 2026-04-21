@@ -112,6 +112,24 @@
       <section class="source-note">
         <p>Source: Compiled from <a href="https://en.wikipedia.org/wiki/List_of_video_games_released_in_2026">Wikipedia — List of video games released in 2026</a> (CC BY-SA 4.0).</p>
       </section>
+
+      <section class="user-reviews">
+        <h3>What do you think? Leave a Review!</h3>
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+          (function() {
+            var d = document, s = document.createElement('script');
+            s.src = 'https://SHORTNAME.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view comments powered by Disqus.</noscript>
+      </section>
     </article>
   </main>
 

@@ -112,6 +112,24 @@
         </article>
     </main>
 
+        <section class="user-reviews" style="max-width:1100px;margin:28px auto;padding:18px;">
+                <h3>What do you think? Leave a Review!</h3>
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = window.location.href;
+                        this.page.identifier = window.location.pathname;
+                    };
+                    (function() {
+                        var d = document, s = document.createElement('script');
+                        s.src = 'https://SHORTNAME.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view comments powered by Disqus.</noscript>
+        </section>
+
     <footer class="footer">
         <p>Built for gamers. Powered by fast static design.</p>
         <p>Want custom game categories or a live scoreboard? Add them to your site anytime.</p>
