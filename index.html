@@ -52,10 +52,16 @@
                 </div>
 
                 <div class="hero-visual">
+                    <div class="hero-search">
+                        <input id="searchInput" type="search" placeholder="Search for games, genres, or titles..." aria-label="Search games">
+                    </div>
+
                     <div class="hero-image">
-                        <img src="https://media-rockstargames-com.akamaized.net/mws/static/img/home/gta-vi.jpg" alt="GTA VI poster" style="width:100%;height:100%;object-fit:cover;display:block;" loading="eager">
+                        <img src="https://media-rockstargames-com.akamaized.net/mws/static/img/home/gta-vi.jpg" alt="GTA VI poster" loading="eager" onerror="this.style.display='none'; this.parentNode.classList.add('hero-image--fallback');">
+                        <div class="hero-fallback" aria-hidden="true">GTA VI — Coming 2026</div>
                         <div class="image-tag">Level up your game library</div>
                     </div>
+
                     <div class="features">
                         <div class="feature-card">
                             <strong>120+</strong>
@@ -72,11 +78,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="search-panel" style="margin-top:20px; display:flex; gap:12px; align-items:center; max-width:1200px; margin-left:auto; margin-right:auto;">
-                <input id="searchInput" type="search" placeholder="Search for games, genres, or titles..." style="flex:1; padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,0.06); background:rgba(255,255,255,0.02); color:var(--text);">
-                <div class="category-bar" id="categories"></div>
-            </div>
         </section>
 
         <!-- Main content: Trending games (left) + Sidebar (right) -->
@@ -90,16 +91,16 @@
 
             <aside class="sidebar">
                 <div class="featured-blogs-sidebar">
-                    <h3>Featured Blog Posts</h3>
+                    <h3>Latest Articles</h3>
                     <ul class="blog-links">
-                        <li><a href="upcoming-2026.html">New: 2026 Game Release Calendar</a></li>
-                        <li><a href="optimization.html">Game Optimization Tips</a></li>
-                        <li><a href="indie-games.html">Best Indie Games 2024</a></li>
-                        <li><a href="survival-games.html">Top Survival Games</a></li>
-                        <li><a href="multiplayer-classics.html">Multiplayer Classics</a></li>
-                        <li><a href="racing-games.html">Top Racing Games for Low-End PC</a></li>
-                        <li><a href="steam-free-games.html">Best Free-to-Play Games on Steam</a></li>
-                        <li><a href="action-games.html">Must-Play Action Games for 4GB RAM</a></li>
+                        <li><a href="upcoming-2026.html">New: 2026 Game Release Calendar</a> <a class="read-more" href="upcoming-2026.html">Read more →</a></li>
+                        <li><a href="optimization.html">Game Optimization Tips</a> <a class="read-more" href="optimization.html">Read more →</a></li>
+                        <li><a href="indie-games.html">Best Indie Games 2024</a> <a class="read-more" href="indie-games.html">Read more →</a></li>
+                        <li><a href="survival-games.html">Top Survival Games</a> <a class="read-more" href="survival-games.html">Read more →</a></li>
+                        <li><a href="multiplayer-classics.html">Multiplayer Classics</a> <a class="read-more" href="multiplayer-classics.html">Read more →</a></li>
+                        <li><a href="racing-games.html">Top Racing Games for Low-End PC</a> <a class="read-more" href="racing-games.html">Read more →</a></li>
+                        <li><a href="steam-free-games.html">Best Free-to-Play Games on Steam</a> <a class="read-more" href="steam-free-games.html">Read more →</a></li>
+                        <li><a href="action-games.html">Must-Play Action Games for 4GB RAM</a> <a class="read-more" href="action-games.html">Read more →</a></li>
                     </ul>
                 </div>
 
