@@ -24,6 +24,10 @@ const searchInput = document.getElementById('searchInput');
 const countdownTitle = document.getElementById('countdownTitle');
 const countdownTimer = document.getElementById('countdownTimer');
 
+if (!gamesContainer) console.warn('Warning: #gamesContainer not found — games cannot be rendered.');
+if (!categoriesContainer) console.warn('Warning: #categories not found — category buttons will be disabled.');
+if (!sectionTitle) console.warn('Warning: #sectionTitle not found — section titles may not update.');
+
 function getUpcomingRelease() {
     const now = new Date();
     const futureGames = window.gameData?.filter(game => new Date(game.releaseDate) > now) || [];
@@ -80,6 +84,7 @@ function createCategoryButton(category) {
 }
 
 function renderCategories() {
+    if (!categoriesContainer) return;
     categoriesContainer.innerHTML = '';
     Object.keys(genreMap).forEach(category => {
         categoriesContainer.appendChild(createCategoryButton(category));
@@ -87,6 +92,7 @@ function renderCategories() {
 }
 
 function renderLoadingState() {
+    if (!gamesContainer) return;
     gamesContainer.innerHTML = `
         <div class="loading-state">
             <div class="spinner"></div>
@@ -96,11 +102,13 @@ function renderLoadingState() {
 }
 
 function renderErrorState(message) {
+    if (!gamesContainer) return;
     gamesContainer.innerHTML = `<p class="empty-state error-state">${message}</p>`;
 }
 
 function renderRawgGames(rawgGames) {
-    if (!rawgGames.length) {
+    if (!gamesContainer) return;
+    if (!rawgGames || !rawgGames.length) {
         gamesContainer.innerHTML = '<p class="empty-state">No games found. Try a different keyword or category.</p>';
         return;
     }
@@ -176,15 +184,19 @@ async function fetchAndRenderRawgGames(query = '', genreSlug = '') {
     }
 }
 
-searchInput.addEventListener('input', event => {
-    state.search = event.target.value.trim();
-    clearTimeout(window.rawgSearchTimeout);
-    window.rawgSearchTimeout = setTimeout(() => {
-        fetchAndRenderRawgGames(state.search, genreMap[state.category]);
-    }, 350);
-});
+if (searchInput) {
+    searchInput.addEventListener('input', event => {
+        state.search = event.target.value.trim();
+        clearTimeout(window.rawgSearchTimeout);
+        window.rawgSearchTimeout = setTimeout(() => {
+            fetchAndRenderRawgGames(state.search, genreMap[state.category]);
+        }, 350);
+    });
+} else {
+    console.warn('Warning: #searchInput not found — search box disabled.');
+}
 
-renderCategories();
+if (categoriesContainer) renderCategories();
 fetchAndRenderRawgGames();
 setupCountdown();
 
