@@ -1044,21 +1044,21 @@ body.menu-open .menu-toggle span::after {
 
 .game-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
 }
 
 .main-content-wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 32px;
-    padding-top: 160px;
+    padding: 24px;
+    padding-top: 120px;
 }
 
 .content-layout {
     display: flex;
-    gap: 32px;
-    margin-bottom: 40px;
+    gap: 24px;
+    margin-bottom: 36px;
 }
 
 .main-content {
@@ -1067,7 +1067,7 @@ body.menu-open .menu-toggle span::after {
 }
 
 .sidebar {
-    width: 280px;
+    width: 260px;
     flex-shrink: 0;
 }
 
@@ -1236,9 +1236,9 @@ body.menu-open .menu-toggle span::after {
     position: relative;
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 28px;
+    border-radius: 16px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
 .game-card:hover {
@@ -1247,18 +1247,18 @@ body.menu-open .menu-toggle span::after {
 }
 
 .game-card img {
-    height: 220px;
+    height: 160px;
     width: 100%;
     object-fit: cover;
 }
 
 .game-card-content {
-    padding: 22px;
+    padding: 14px;
 }
 
 .game-card-content h3 {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.05rem;
 }
 
 .game-meta {

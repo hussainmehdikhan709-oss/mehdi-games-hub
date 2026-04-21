@@ -28,183 +28,112 @@
     </header>
 
     <main class="main-content-wrapper">
-        <div class="content-layout">
-            <section class="main-content">
-                <div class="featured-section">
-                    <h2>Top 10 Open World Games for Low-End PCs</h2>
-                    <div class="blog-grid-new">
-                        <div class="blog-card">
-                            <h3>GTA Vice City</h3>
-                            <p>Classic open world adventure that runs smoothly on any PC. Timeless gameplay and retro vibes without demanding specs.</p>
-                            <a class="btn btn-primary" href="game.html?id=grand-theft-auto-vice-city">View Details</a>
+        <!-- Hero: main search + countdown -->
+        <section class="hero compact-hero" id="home">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Official gaming portal</p>
+                    <h1>Play your next favorite game with ease.</h1>
+                    <p>Browse top-rated releases, search by genre, and jump straight to official download pages. Your gaming showcase is built for speed, clarity, and style.</p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="games.html">Browse games</a>
+                        <a class="btn btn-secondary" href="game.html?id=elden-ring">View details</a>
+                    </div>
+
+                    <div class="hero-status">
+                        <div class="countdown-card">
+                            <p>Next release</p>
+                            <strong id="countdownTitle">Loading release...</strong>
+                            <div class="countdown-value" id="countdownTimer">00d 00h 00m 00s</div>
                         </div>
-                        <div class="blog-card">
-                            <h3>Minecraft</h3>
-                            <p>Build endless worlds with low-end optimizations and emulators. Creative freedom on minimal hardware for all ages.</p>
-                            <a class="btn btn-primary" href="game.html?id=minecraft">View Details</a>
-                        </div>
-                        <div class="blog-card">
-                            <h3>Sleeping Dogs</h3>
-                            <p>Best combat and story experience for mid-range PCs. Intense martial arts action that performs exceptionally well.</p>
-                            <a class="btn btn-primary" href="game.html?id=sleeping-dogs">View Details</a>
-                        </div>
-                        <div class="blog-card">
-                            <h3>GTA San Andreas</h3>
-                            <p>The ultimate open world game, optimized for older systems. Legendary title with massive freedom on low-end PCs.</p>
-                            <a class="btn btn-primary" href="game.html?id=grand-theft-auto-san-andreas">View Details</a>
-                        </div>
-                        <div class="blog-card">
-                            <h3>Just Cause 2</h3>
-                            <p>Epic destruction and chaos on the lowest specs. Explosive fun and grappling adventures without high requirements.</p>
-                            <a class="btn btn-primary" href="game.html?id=just-cause-2">View Details</a>
-                        </div>
-                        <div class="blog-card">
-                            <h3>Gun</h3>
-                            <p>Classic Western open world on basic PCs. Shootouts, exploration, and cowboy action that runs great.</p>
-                            <a class="btn btn-primary" href="game.html?id=gun">View Details</a>
-                        </div>
+                        <a class="btn btn-outline" href="games.html">See full game list</a>
                     </div>
                 </div>
 
+                <div class="hero-visual">
+                    <div class="hero-image">
+                        <img src="https://source.unsplash.com/1280x720/?gaming,esports" alt="Pro gaming action">
+                        <div class="image-tag">Level up your game library</div>
+                    </div>
+                    <div class="features">
+                        <div class="feature-card">
+                            <strong>120+</strong>
+                            <p>Curated game listings from action to sports.</p>
+                        </div>
+                        <div class="feature-card">
+                            <strong>Instant search</strong>
+                            <p>Filter by name and category in real time.</p>
+                        </div>
+                        <div class="feature-card">
+                            <strong>Official links</strong>
+                            <p>Download from verified publisher pages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-panel" style="margin-top:20px; display:flex; gap:12px; align-items:center; max-width:1200px; margin-left:auto; margin-right:auto;">
+                <input id="searchInput" type="search" placeholder="Search for games, genres, or titles..." style="flex:1; padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,0.06); background:rgba(255,255,255,0.02); color:var(--text);">
+                <div class="category-bar" id="categories"></div>
+            </div>
+        </section>
+
+        <!-- Main content: Trending games (left) + Sidebar (right) -->
+        <div class="content-layout">
+            <section class="main-content">
                 <section class="games-section">
                     <h2 id="sectionTitle">Trending Games</h2>
-                    <!DOCTYPE html>
-                    <html lang="en">
-                    <head>
-                        <meta charset="UTF-8">
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                        <title>Mehdi Games Hub</title>
-                        <link rel="icon" href="https://favicon.io/favicon.ico?t=MGH&bg=161b22&fg=4f8cff" type="image/x-icon">
-                        <link rel="stylesheet" href="styles.css">
-                        <meta name="google-site-verification" content="jepfK3sZG1VsT32YRBseln32zGqpYNEd5GuhUY0H6hA" />
-                    </head>
-                    <body>
-                        <header class="site-header-new">
-                            <div class="header-container">
-                                <div class="site-title">
-                                    <h1>Mehdi Games Hub</h1>
-                                    <p>Discover. Download. Play.</p>
-                                </div>
-                            </div>
-                            <nav class="category-nav">
-                                <a href="index.html" class="nav-cat active-cat">Home</a>
-                                <a href="#" class="nav-cat" data-category="action">Action</a>
-                                <a href="#" class="nav-cat" data-category="adventure">Adventure</a>
-                                <a href="#" class="nav-cat" data-category="racing">Racing</a>
-                                <a href="#" class="nav-cat" data-category="rpg">Open World</a>
-                                <a href="games.html" class="nav-cat">All Games</a>
-                                <a href="about.html" class="nav-cat">About Us</a>
-                            </nav>
-                        </header>
+                    <div class="game-grid" id="gamesContainer"></div>
+                </section>
+            </section>
 
-                        <main class="main-content-wrapper">
-                            <!-- Hero: main search + countdown -->
-                            <section class="hero compact-hero" id="home">
-                                <div class="hero-grid">
-                                    <div class="hero-copy">
-                                        <p class="eyebrow">Official gaming portal</p>
-                                        <h1>Play your next favorite game with ease.</h1>
-                                        <p>Browse top-rated releases, search by genre, and jump straight to official download pages. Your gaming showcase is built for speed, clarity, and style.</p>
-
-                                        <div class="hero-actions">
-                                            <a class="btn btn-primary" href="games.html">Browse games</a>
-                                            <a class="btn btn-secondary" href="game.html?id=elden-ring">View details</a>
-                                        </div>
-
-                                        <div class="hero-status">
-                                            <div class="countdown-card">
-                                                <p>Next release</p>
-                                                <strong id="countdownTitle">Loading release...</strong>
-                                                <div class="countdown-value" id="countdownTimer">00d 00h 00m 00s</div>
-                                            </div>
-                                            <a class="btn btn-outline" href="games.html">See full game list</a>
-                                        </div>
-                                    </div>
-
-                                    <div class="hero-visual">
-                                        <div class="hero-image">
-                                            <img src="https://source.unsplash.com/1280x720/?gaming,esports" alt="Pro gaming action">
-                                            <div class="image-tag">Level up your game library</div>
-                                        </div>
-                                        <div class="features">
-                                            <div class="feature-card">
-                                                <strong>120+</strong>
-                                                <p>Curated game listings from action to sports.</p>
-                                            </div>
-                                            <div class="feature-card">
-                                                <strong>Instant search</strong>
-                                                <p>Filter by name and category in real time.</p>
-                                            </div>
-                                            <div class="feature-card">
-                                                <strong>Official links</strong>
-                                                <p>Download from verified publisher pages.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="search-panel" style="margin-top:20px; display:flex; gap:12px; align-items:center; max-width:1200px; margin-left:auto; margin-right:auto;">
-                                    <input id="searchInput" type="search" placeholder="Search for games, genres, or titles..." style="flex:1; padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,0.06); background:rgba(255,255,255,0.02); color:var(--text);">
-                                    <div class="category-bar" id="categories"></div>
-                                </div>
-                            </section>
-
-                            <!-- Main content: Trending games (left) + Sidebar (right) -->
-                            <div class="content-layout">
-                                <section class="main-content">
-                                    <section class="games-section">
-                                        <h2 id="sectionTitle">Trending Games</h2>
-                                        <div class="game-grid" id="gamesContainer"></div>
-                                    </section>
-                                </section>
-
-                                <aside class="sidebar">
-                                    <div class="featured-blogs-sidebar">
-                                        <h3>Featured Blog Posts</h3>
-                                        <ul class="blog-links">
-                                            <li><a href="upcoming-2026.html">New: 2026 Game Release Calendar</a></li>
-                                            <li><a href="optimization.html">Game Optimization Tips</a></li>
-                                            <li><a href="indie-games.html">Best Indie Games 2024</a></li>
-                                            <li><a href="survival-games.html">Top Survival Games</a></li>
-                                            <li><a href="multiplayer-classics.html">Multiplayer Classics</a></li>
-                                            <li><a href="racing-games.html">Top Racing Games for Low-End PC</a></li>
-                                            <li><a href="steam-free-games.html">Best Free-to-Play Games on Steam</a></li>
-                                            <li><a href="action-games.html">Must-Play Action Games for 4GB RAM</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="community-feedback" style="margin-top:18px;padding:14px;background:rgba(255,255,255,0.02);border-radius:12px;">
-                                        <h3>Community Feedback</h3>
-                                        <div id="recent-comments-widget">
-                                            <p style="color:var(--muted);font-size:0.95rem;margin:8px 0 12px;">Recent reviews from our community (powered by Disqus)</p>
-                                            <script type="text/javascript" src="https://mehdigameshub.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&excerpt_length=100"></script>
-                                            <noscript>Please enable JavaScript to view recent reviews.</noscript>
-                                        </div>
-                                    </div>
-
-                                    <div class="sidebar-cta" style="margin-top:18px;">
-                                        <h3>Browse Full Library</h3>
-                                        <a href="games.html" class="btn btn-primary">View All Games</a>
-                                    </div>
-                                </aside>
-                            </div>
-
-                            <div class="category-bar-container" style="max-width:1400px;margin:0 auto;padding:0 32px;">
-                                <!-- supplementary category bar (kept for compatibility) -->
-                            </div>
-                        </main>
-
-                        <footer class="footer" id="contact">
-                            <p>Built for gamers. Powered by fast static design.</p>
-                            <div class="footer-links">
-                                <a href="about.html">About Us</a> |
-                                <a href="privacy.html">Privacy Policy</a> |
-                                <a href="mailto:hussainmehdikhan709@gmail.com">Contact</a>
-                            </div>
-                        </footer>
-
-                        <script src="data.js"></script>
-                        <script src="script.js"></script>
-                    </body>
-                    </html>
+            <aside class="sidebar">
+                <div class="featured-blogs-sidebar">
+                    <h3>Featured Blog Posts</h3>
+                    <ul class="blog-links">
+                        <li><a href="upcoming-2026.html">New: 2026 Game Release Calendar</a></li>
+                        <li><a href="optimization.html">Game Optimization Tips</a></li>
+                        <li><a href="indie-games.html">Best Indie Games 2024</a></li>
+                        <li><a href="survival-games.html">Top Survival Games</a></li>
+                        <li><a href="multiplayer-classics.html">Multiplayer Classics</a></li>
+                        <li><a href="racing-games.html">Top Racing Games for Low-End PC</a></li>
+                        <li><a href="steam-free-games.html">Best Free-to-Play Games on Steam</a></li>
+                        <li><a href="action-games.html">Must-Play Action Games for 4GB RAM</a></li>
+                    </ul>
                 </div>
+
+                <div class="community-feedback" style="margin-top:18px;padding:14px;background:rgba(255,255,255,0.02);border-radius:12px;">
+                    <h3>Community Feedback</h3>
+                    <div id="recent-comments-widget">
+                        <p style="color:var(--muted);font-size:0.95rem;margin:8px 0 12px;">Recent reviews from our community (powered by Disqus)</p>
+                        <script type="text/javascript" src="https://mehdigameshub.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&excerpt_length=100"></script>
+                        <noscript>Please enable JavaScript to view recent reviews.</noscript>
+                    </div>
+                </div>
+
+                <div class="sidebar-cta" style="margin-top:18px;">
+                    <h3>Browse Full Library</h3>
+                    <a href="games.html" class="btn btn-primary">View All Games</a>
+                </div>
+            </aside>
+        </div>
+
+        <div class="category-bar-container" style="max-width:1400px;margin:0 auto;padding:0 32px;">
+            <!-- supplementary category bar (kept for compatibility) -->
+        </div>
+    </main>
+
+    <footer class="footer" id="contact">
+        <p>Built for gamers. Powered by fast static design.</p>
+        <div class="footer-links">
+            <a href="about.html">About Us</a> |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="mailto:hussainmehdikhan709@gmail.com">Contact</a>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
